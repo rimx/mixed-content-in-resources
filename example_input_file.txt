@@ -1,0 +1,2 @@
+http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js
+https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css
