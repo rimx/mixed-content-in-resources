@@ -2,6 +2,7 @@ import sys
 import re
 import urllib.request
 
+exp_comments = '/\*(.|\n)*?\*/';
 exp = 'http?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
 counter = 1
 
@@ -20,6 +21,8 @@ with open('output_'+input_file, 'w') as output_file:
       print('-'*72)
       try:
         content = urllib.request.urlopen(line).read().decode('utf-8')
+        #strip out the comments
+        content = re.sub(exp_comments,'',content)
         urls = re.findall(exp,content)
         if urls:        
           output_file.write(str(counter) + '.' +line+'\n' + '-'*72+'\n')
