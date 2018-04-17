@@ -3,7 +3,8 @@ import re
 import urllib.request
 
 exp_comments = '/\*(.|\n)*?\*/';
-exp = 'http?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
+#exp = 'http?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
+exp = '<div id="socialBookmarks">'
 counter = 1
 
 if len(sys.argv) < 2: 
